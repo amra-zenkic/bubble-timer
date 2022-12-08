@@ -1,0 +1,89 @@
+@charset "UTF-8";
+body {
+  margin: 0;
+  color: #262672;
+}
+
+/*
+███╗   ███╗██╗██╗  ██╗██╗███╗   ██╗███████╗
+████╗ ████║██║╚██╗██╔╝██║████╗  ██║██╔════╝
+██╔████╔██║██║ ╚███╔╝ ██║██╔██╗ ██║███████╗
+██║╚██╔╝██║██║ ██╔██╗ ██║██║╚██╗██║╚════██║
+██║ ╚═╝ ██║██║██╔╝ ██╗██║██║ ╚████║███████║
+╚═╝     ╚═╝╚═╝╚═╝  ╚═╝╚═╝╚═╝  ╚═══╝╚══════╝
+
+*/
+/*
+.section {
+
+    &__title {
+        font-size: 24px;
+        font-weight: bold;
+        background: $pozadina;
+        @include for-size(phone-only) {
+            font-size: 12px;
+        }
+
+        &--red {
+            color:green($color: #000000);
+
+        }
+
+        &:hover {
+            background: darken($pozadina, 10%)
+        }
+    }    
+
+}
+*/
+body {
+  background-color: #F5D3BE;
+  font-family: "Source Code Pro", monospace;
+}
+body .container {
+  text-align: center;
+  padding: 7%;
+  align-content: center;
+}
+body .container .box {
+  display: grid;
+  grid-template-rows: auto 200% auto;
+}
+body .container .box .input-box {
+  display: inline-flex;
+  justify-content: center;
+}
+body .container .box .input-box input {
+  height: 35px;
+  border-radius: 15px;
+  text-align: center;
+  font-size: 15px;
+}
+body .container .box .input-box .col-auto {
+  font-size: 30px;
+}
+body .container .box .timer {
+  align-self: center;
+  font-size: 90px;
+  color: #a85571;
+}
+body .container .box .buttons {
+  display: inline-flex;
+  justify-content: center;
+  gap: 10px;
+}
+body .container .box .buttons #pause-btn:focus {
+  background-color: palevioletred;
+}
+body .container .box .buttons .resume-btn:focus #pause-btn {
+  background-color: aliceblue;
+}
+body .container .box .buttons button {
+  width: 150px;
+  height: 50px;
+}
+body .container .box .buttons button:hover {
+  background-color: rgba(216, 112, 147, 0.541);
+}
+
+/*# sourceMappingURL=index.css.map */

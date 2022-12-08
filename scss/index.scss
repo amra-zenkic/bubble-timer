@@ -1,0 +1,81 @@
+@import "variables";
+@import "general";
+@import "mixins";
+
+/*
+.section {
+
+    &__title {
+        font-size: 24px;
+        font-weight: bold;
+        background: $pozadina;
+        @include for-size(phone-only) {
+            font-size: 12px;
+        }
+
+        &--red {
+            color:green($color: #000000);
+
+        }
+
+        &:hover {
+            background: darken($pozadina, 10%)
+        }
+    }    
+
+}
+*/
+
+body {
+    background-color: $pinki;
+    font-family: 'Source Code Pro', monospace;
+    .container {
+        text-align: center;
+        padding: 7%;
+        align-content: center;
+
+        .box {
+            display: grid;
+            grid-template-rows: auto 200% auto;
+            //flex-direction: column;
+            .input-box {
+                display: inline-flex;
+                justify-content: center;
+                input {
+                    height: 35px;
+                    border-radius: 15px;
+                    text-align: center;
+                    font-size: 15px;
+                }
+                .col-auto {
+                    font-size: 30px;
+                }
+            }
+            .timer {
+                align-self: center;
+                font-size: 90px;
+                color: rgb(168, 85, 113);
+            }
+            .buttons {
+                display: inline-flex;
+                justify-content: center;
+                gap: 10px;
+                #pause-btn:focus {
+                    background-color: palevioletred;
+                }
+                .resume-btn:focus {
+                    #pause-btn {
+                        background-color: aliceblue;
+                    }
+                }
+                button {
+                    width: 150px;
+                    height: 50px;
+                }
+                button:hover {
+                    background-color: rgba(216, 112, 147, 0.541);
+                }
+            }
+        }
+    }
+}
