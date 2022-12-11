@@ -26,56 +26,96 @@
 }
 */
 
-body {
-    background-color: $pinki;
-    font-family: 'Source Code Pro', monospace;
-    .container {
-        text-align: center;
-        padding: 7%;
-        align-content: center;
 
-        .box {
-            display: grid;
-            grid-template-rows: auto 200% auto;
-            //flex-direction: column;
-            .input-box {
-                display: inline-flex;
-                justify-content: center;
-                input {
-                    height: 35px;
-                    border-radius: 15px;
-                    text-align: center;
-                    font-size: 15px;
+    body {
+
+        background-color: $pinki;
+        font-family: 'Source Code Pro', monospace;
+
+        .container {
+            text-align: center;
+            padding: 7%;
+            align-content: center;
+    
+            .box {
+                display: grid;
+                grid-template-rows: auto 200% auto;
+                @include for-size(phone-only) {
+                    grid-template-rows: auto 500% auto;
                 }
-                .col-auto {
-                    font-size: 30px;
-                }
-            }
-            .timer {
-                align-self: center;
-                font-size: 90px;
-                color: rgb(168, 85, 113);
-            }
-            .buttons {
-                display: inline-flex;
-                justify-content: center;
-                gap: 10px;
-                #pause-btn:focus {
-                    background-color: palevioletred;
-                }
-                .resume-btn:focus {
-                    #pause-btn {
-                        background-color: aliceblue;
+
+                //flex-direction: column;
+                .input-box {
+                    display: inline-flex;
+                    justify-content: center;
+
+                    input {
+                        @include for-size(phone-only) {
+                                height: 33%;
+                                font-size: 28px;
+
+                                
+                        }
+                        height: 35px;
+                        border-radius: 15px;
+                        text-align: center;
+                        font-size: 15px;
+                    }
+
+                    .col-auto {
+                        @include for-size(phone-only) {
+                            font-size: 50px;
+                            margin-top: 15px;
+                            
+                    }
+                        font-size: 30px;
                     }
                 }
-                button {
-                    width: 150px;
-                    height: 50px;
+
+                .timer {
+                    @include for-size(phone-only) {
+                        font-size: 180px;
+                    }
+                    align-self: center;
+                    font-size: 90px;
+                    color: rgb(168, 85, 113);
                 }
-                button:hover {
-                    background-color: rgba(216, 112, 147, 0.541);
+
+                .buttons {
+                    display: inline-flex;
+                    justify-content: center;
+                    gap: 10px;
+                    @include for-size(phone-only) {
+                        display: block;
+                        margin-top: -30px;
+                        
+                    }
+
+                    #pause-btn:focus {
+                        background-color: palevioletred;
+                    }
+
+                    .resume-btn:focus {
+                        #pause-btn {
+                            background-color: aliceblue;
+                        }
+                    }
+
+                    button {
+                        width: 150px;
+                        height: 50px;
+                        @include for-size(phone-only) {
+                            width: 50%;
+                            height: 160px;
+                            font-size: 40px;
+                            margin-bottom: 35px;
+                        }
+                    }
+
+                    button:hover {
+                        background-color: rgba(216, 112, 147, 0.541);
+                    }
                 }
             }
         }
     }
-}

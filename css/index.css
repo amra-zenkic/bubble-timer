@@ -49,6 +49,11 @@ body .container .box {
   display: grid;
   grid-template-rows: auto 200% auto;
 }
+@media (max-width: 599px) {
+  body .container .box {
+    grid-template-rows: auto 500% auto;
+  }
+}
 body .container .box .input-box {
   display: inline-flex;
   justify-content: center;
@@ -59,18 +64,41 @@ body .container .box .input-box input {
   text-align: center;
   font-size: 15px;
 }
+@media (max-width: 599px) {
+  body .container .box .input-box input {
+    height: 33%;
+    font-size: 28px;
+  }
+}
 body .container .box .input-box .col-auto {
   font-size: 30px;
+}
+@media (max-width: 599px) {
+  body .container .box .input-box .col-auto {
+    font-size: 50px;
+    margin-top: 15px;
+  }
 }
 body .container .box .timer {
   align-self: center;
   font-size: 90px;
   color: #a85571;
 }
+@media (max-width: 599px) {
+  body .container .box .timer {
+    font-size: 180px;
+  }
+}
 body .container .box .buttons {
   display: inline-flex;
   justify-content: center;
   gap: 10px;
+}
+@media (max-width: 599px) {
+  body .container .box .buttons {
+    display: block;
+    margin-top: -30px;
+  }
 }
 body .container .box .buttons #pause-btn:focus {
   background-color: palevioletred;
@@ -81,6 +109,14 @@ body .container .box .buttons .resume-btn:focus #pause-btn {
 body .container .box .buttons button {
   width: 150px;
   height: 50px;
+}
+@media (max-width: 599px) {
+  body .container .box .buttons button {
+    width: 50%;
+    height: 160px;
+    font-size: 40px;
+    margin-bottom: 35px;
+  }
 }
 body .container .box .buttons button:hover {
   background-color: rgba(216, 112, 147, 0.541);
